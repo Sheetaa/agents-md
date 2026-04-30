@@ -185,13 +185,13 @@ Claude Code 可以在 `CLAUDE.md` 中引用 `AGENTS.md`：
 
 目前没有确认存在跨 Coding Agent 通用的 `.local.md` 约定。
 
-| 工具 | 已确认行为 | 本地/私有覆盖状态 |
-|---|---|---|
-| Claude Code | 官方文档说明 Claude Code 读取 `CLAUDE.md`，支持 `@path` import，并会加载与 `CLAUDE.md` 同级的 `CLAUDE.local.md`。 | `CLAUDE.local.md` 官方支持，用于个人项目偏好，应加入 `.gitignore`。 |
-| Gemini CLI | 官方文档说明 Gemini CLI 使用层级化 `GEMINI.md` context files，并支持 `context.fileName` 配置为字符串或字符串数组。 | 未找到默认支持 `GEMINI.local.md` 的官方说明。可以通过 `context.fileName` 显式配置额外文件名，但这不是默认约定。 |
-| AGENTS.md 标准 | agents.md 官网说明了 `AGENTS.md`、嵌套 `AGENTS.md`、软链，以及 Gemini 配置为读取 `AGENTS.md` 的方式。 | 未找到 `AGENTS.local.md` 的官方约定。 |
-| OpenAI Codex | Codex/AGENTS.md 支持可从 AGENTS.md 生态文档确认；部分搜索结果提到 `AGENTS.override.md`，但在作为建议前还需要用当前官方 Codex 文档或本地版本进一步确认。 | 不应假设 Codex 会自动加载 `AGENTS.local.md`，除非目标版本或官方文档明确支持。 |
-| Cursor | Cursor 属于 AGENTS.md 生态，也有自己的 rules/settings 机制；本次未确认官方 `AGENTS.local.md` 行为。 | 不应假设 `.local.md` 会自动加载。需要个人覆盖时，应使用 Cursor 官方 rules/settings 机制。 |
+| 工具           | 已确认行为                                                                                                                                              | 本地/私有覆盖状态                                                                                               |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| Claude Code    | 官方文档说明 Claude Code 读取 `CLAUDE.md`，支持 `@path` import，并会加载与 `CLAUDE.md` 同级的 `CLAUDE.local.md`。                                       | `CLAUDE.local.md` 官方支持，用于个人项目偏好，应加入 `.gitignore`。                                             |
+| Gemini CLI     | 官方文档说明 Gemini CLI 使用层级化 `GEMINI.md` context files，并支持 `context.fileName` 配置为字符串或字符串数组。                                      | 未找到默认支持 `GEMINI.local.md` 的官方说明。可以通过 `context.fileName` 显式配置额外文件名，但这不是默认约定。 |
+| AGENTS.md 标准 | agents.md 官网说明了 `AGENTS.md`、嵌套 `AGENTS.md`、软链，以及 Gemini 配置为读取 `AGENTS.md` 的方式。                                                   | 未找到 `AGENTS.local.md` 的官方约定。                                                                           |
+| OpenAI Codex   | Codex/AGENTS.md 支持可从 AGENTS.md 生态文档确认；部分搜索结果提到 `AGENTS.override.md`，但在作为建议前还需要用当前官方 Codex 文档或本地版本进一步确认。 | 不应假设 Codex 会自动加载 `AGENTS.local.md`，除非目标版本或官方文档明确支持。                                   |
+| Cursor         | Cursor 属于 AGENTS.md 生态，也有自己的 rules/settings 机制；本次未确认官方 `AGENTS.local.md` 行为。                                                     | 不应假设 `.local.md` 会自动加载。需要个人覆盖时，应使用 Cursor 官方 rules/settings 机制。                       |
 
 当前实用建议：
 
