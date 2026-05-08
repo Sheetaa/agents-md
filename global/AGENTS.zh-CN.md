@@ -102,6 +102,7 @@
 - 同一问题连续两次修正失败后，停止。总结已知信息，请求重置或更精确的提示。
 - 大型探索任务使用独立探索上下文或 subagent，避免污染主上下文。
 - 提交时写有描述性的提交信息：标题少于 72 字符，正文解释原因。不要写 “update file” 或 “fix bug” 这类空泛信息。
+- docs: 严格遵循 [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) 规范
 
 ---
 
