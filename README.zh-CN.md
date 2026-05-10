@@ -2,17 +2,26 @@
 
 [![English](https://img.shields.io/badge/README-English-blue)](README.md) [![中文](https://img.shields.io/badge/README-中文-red)](README.zh-CN.md)
 
-这是一个面向 AI Coding Agent 的两层工作规范模板，基于 [agents-md](https://github.com/TheRealSeanDonahoe/agents-md) 修改而来。
+这是一个面向 AI Coding Agent 的两层工作规范模板，基于
+[agents-md](https://github.com/TheRealSeanDonahoe/agents-md) by Sean Donahoe 修改而来。
 
-感谢 Sean Donahoe 和 agents-md 项目提供的原始结构与实用原则。agents-md 本身也综合了多位实践者和社区的优秀经验，包括 Sean Donahoe 的 IJFW 原则、Andrej Karpathy 对 LLM 编程常见问题的观察、Boris Cherny 的 Claude Code 工作流、Anthropic 官方 Claude Code 最佳实践、社区反谄媚模式，以及 AGENTS.md 开放标准。本仓库建立在这些来源之上，保留其中通用价值较高的部分：不可妥协原则、先理解再编码、简单优先、外科手术式修改、验证闭环和会话卫生；同时重新组织为更适合团队使用的「跨项目一致性 + 仓库事实」两层结构。
+本仓库建立在以下来源之上，保留其中通用价值较高的原则——不可妥协原则、先理解再编码、简单优先、外科手术式修改、验证闭环和会话卫生——并重新组织为跨项目一致性与仓库事实分层的两层结构：
+
+- [agents-md](https://github.com/TheRealSeanDonahoe/agents-md) by Sean Donahoe — 原始结构与实用的 Coding Agent 原则
+- Sean Donahoe 的 IJFW 原则
+- Andrej Karpathy 对 LLM 编程常见问题的观察
+- [Boris 如何使用 Claude Code](https://howborisusesclaudecode.com/)（Boris Cherny）
+- [Claude Code 最佳实践](https://code.claude.com/docs/en/best-practices)（Anthropic）
+- 社区反谄媚模式
+- [AGENTS.md 开放标准](https://agents.md/)
 
 ## 名称说明
 
 本仓库命名为 **agents-md**，是为了贴近 AGENTS.md 生态，同时表达它仍然是一套基于 Markdown 的 Coding Agent 工作约定。
 
-在模板正文中，统一使用 **Agent 工作规范**，而不是反复写死 `AGENTS.md`。原因是可移植性：同一份规范内容可能以 `AGENTS.md` 被读取，也可能通过 `CLAUDE.md` import，被复制到 `GEMINI.md`，或通过软链复用。如果正文一直写“AGENTS.md”，当其他工具以不同文件名读取同一份内容时会造成语义错位。
+在模板正文中，统一使用 **Agent 工作规范**，而不是反复写死 `AGENTS.md`。原因是可移植性：同一份规范内容可能以 `AGENTS.md` 被读取，也可能通过 `CLAUDE.md` import，被复制到 `GEMINI.md`，或通过软链复用。如果正文一直写"AGENTS.md"，当其他工具以不同文件名读取同一份内容时会造成语义错位。
 
-具体文件名只在安装、兼容性和工具特定行为中出现；可复用内容本身使用“Agent 工作规范”“全局工作规范”“项目工作规范”。
+具体文件名只在安装、兼容性和工具特定行为中出现；可复用内容本身使用"Agent 工作规范""全局工作规范""项目工作规范"。
 
 ## 适用场景
 
@@ -28,9 +37,9 @@
 
 共享原则要稳定，项目事实要留在具体仓库中。
 
-- **全局工作规范**回答：“Agent 在所有项目中应该如何工作？”
-- **项目工作规范**回答：“Agent 在这个仓库中需要知道什么？”
-- **个人或机器专属说明**回答：“哪些内容只对当前个人、机器或临时流程有效？”
+- **全局工作规范**回答："Agent 在所有项目中应该如何工作？"
+- **项目工作规范**回答："Agent 在这个仓库中需要知道什么？"
+- **个人或机器专属说明**回答："哪些内容只对当前个人、机器或临时流程有效？"
 
 个人/本地说明的加载方式取决于具体工具，不能假设所有 Coding Agent 都支持同一种 `.local.md` 约定。
 
@@ -42,7 +51,7 @@ agents-md 提供了一份很强的单文件 `AGENTS.md` 模板。本版本主要
    - 全局工作规范：跨项目通用行为和工程原则。
    - 项目工作规范：技术栈、命令、目录结构、项目约定、禁区和项目经验。
 2. **专为跨 Coding Agent 复用设计。**
-   - 模板正文使用“Agent 工作规范”，避免到处写死 `AGENTS.md`。
+   - 模板正文使用"Agent 工作规范"，避免到处写死 `AGENTS.md`。
    - 具体文件名只在安装和兼容说明中出现。
    - 支持软链复用。
    - 也支持 Claude Code 的 `@AGENTS.md` 引用复用。
@@ -186,7 +195,7 @@ Claude Code 可以在 `CLAUDE.md` 中引用 `AGENTS.md`：
 目前没有确认存在跨 Coding Agent 通用的 `.local.md` 约定。
 
 | 工具 | 已确认行为 | 本地/私有覆盖状态 |
-|---|---|---|
+| --- | --- | --- |
 | Claude Code | 官方文档说明 Claude Code 读取 `CLAUDE.md`，支持 `@path` import，并会加载与 `CLAUDE.md` 同级的 `CLAUDE.local.md`。 | `CLAUDE.local.md` 官方支持，用于个人项目偏好，应加入 `.gitignore`。 |
 | Gemini CLI | 官方文档说明 Gemini CLI 使用层级化 `GEMINI.md` context files，并支持 `context.fileName` 配置为字符串或字符串数组。 | 未找到默认支持 `GEMINI.local.md` 的官方说明。可以通过 `context.fileName` 显式配置额外文件名，但这不是默认约定。 |
 | AGENTS.md 标准 | agents.md 官网说明了 `AGENTS.md`、嵌套 `AGENTS.md`、软链，以及 Gemini 配置为读取 `AGENTS.md` 的方式。 | 未找到 `AGENTS.local.md` 的官方约定。 |
@@ -211,6 +220,18 @@ Claude Code 可以在 `CLAUDE.md` 中引用 `AGENTS.md`：
 - 提交到仓库的项目规范文件是团队共享规则。
 - 用户级/全局规范文件是个人跨项目偏好，前提是工具支持该位置。
 - 本地/私有文件只有在目标工具官方支持或显式配置加载时才推荐使用。
+
+## 参与贡献
+
+Clone 后激活本地 pre-commit markdown lint hook：
+
+```sh
+brew install markdownlint-cli
+git config core.hooksPath .githooks
+```
+
+该 hook 会在每次 commit 时对所有 `*.md` 文件执行 `markdownlint` 检查，违反
+[`.markdownlint.json`](.markdownlint.json) 规则的提交将被拒绝。
 
 ## 许可与致谢
 

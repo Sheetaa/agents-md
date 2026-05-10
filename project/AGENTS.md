@@ -2,11 +2,16 @@
 
 ## Naming
 
-This file is a **Project Agent Work Guidelines** template. The term means repository-specific working agreements for AI coding agents: stack, commands, layout, conventions, verification requirements, risk areas, and project learnings.
+This file is a **Project Agent Work Guidelines** template. The term means repository-specific working agreements for
+AI coding agents: stack, commands, layout, conventions, verification requirements, risk areas, and project learnings.
 
-The filename may vary by tool (`AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, or a wrapper/import file). The body uses “Project Agent Work Guidelines” instead of hard-coding `AGENTS.md` so the same content remains clear when reused by different tools.
+The filename may vary by tool (`AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, or a wrapper/import file). The body uses
+"Project Agent Work Guidelines" instead of hard-coding `AGENTS.md` so the same content remains clear when reused by
+different tools.
 
-Repository-specific work guidelines for AI coding agents. Keep this file specific to the current project. Cross-project principles belong in the global guideline; personal or machine-specific details should use tool-supported private/local files and should not be committed.
+Repository-specific work guidelines for AI coding agents. Keep this file specific to the current project. Cross-project
+principles belong in the global guideline; personal or machine-specific details should use tool-supported private/local
+files and should not be committed.
 
 ---
 
@@ -99,6 +104,8 @@ List areas where agents must be especially conservative:
 
 **Accumulated corrections. This section is for the agent to maintain, not just the human.**
 
-When the user corrects your project-specific approach, append a one-line rule here before ending the session. Write it concretely: "Always use X for Y", never abstractly: "be careful with Y". If an existing line already covers the correction, tighten it instead of adding a duplicate. Remove lines when the underlying issue goes away.
+When the user corrects your project-specific approach, append a one-line rule here before ending the session. Write it
+concretely: "Always use X for Y", never abstractly: "be careful with Y". If an existing line already covers the
+correction, tighten it instead of adding a duplicate. Remove lines when the underlying issue goes away.
 
 - (empty)
