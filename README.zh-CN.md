@@ -221,6 +221,18 @@ Claude Code 可以在 `CLAUDE.md` 中引用 `AGENTS.md`：
 - 用户级/全局规范文件是个人跨项目偏好，前提是工具支持该位置。
 - 本地/私有文件只有在目标工具官方支持或显式配置加载时才推荐使用。
 
+## 参与贡献
+
+Clone 后激活本地 pre-commit markdown lint hook：
+
+```sh
+brew install markdownlint-cli
+git config core.hooksPath .githooks
+```
+
+该 hook 会在每次 commit 时对所有 `*.md` 文件执行 `markdownlint` 检查，违反
+[`.markdownlint.json`](.markdownlint.json) 规则的提交将被拒绝。
+
 ## 许可与致谢
 
 本项目基于 [agents-md](https://github.com/TheRealSeanDonahoe/agents-md) 的理念和结构修改而来。发布衍生作品前，请查看上游项目的许可证和署名要求。

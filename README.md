@@ -237,6 +237,18 @@ tool-supported mechanisms instead:
 - Local/private files should only be recommended when the target tool officially supports or is explicitly configured
   to load them.
 
+## Contributing
+
+After cloning, activate the pre-commit markdown lint hook:
+
+```sh
+brew install markdownlint-cli
+git config core.hooksPath .githooks
+```
+
+The hook runs `markdownlint` against all `*.md` files on every commit and blocks commits that violate
+the rules in [`.markdownlint.json`](.markdownlint.json).
+
 ## License and attribution
 
 This project is based on ideas and structure from [agents-md](https://github.com/TheRealSeanDonahoe/agents-md). Please
