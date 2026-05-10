@@ -102,6 +102,7 @@ For every task:
 - After two failed corrections on the same issue, stop. Summarize what you learned and ask for a reset or a sharper prompt.
 - Use separate exploration contexts or subagents for large investigations that would otherwise pollute the main context.
 - When committing, write descriptive commit messages: subject under 72 characters, body explains the why. No vague messages like "update file" or "fix bug".
+- Follow the standard of [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) religiously.
 
 ---
 
